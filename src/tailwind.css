@@ -1,0 +1,24 @@
+/* This loads TailwindCSS v4. */
+@import "tailwindcss";
+
+/* 
+    We need to tell Tailwind where to scan for classes so it can generate only what we actually use.
+
+    If your HTML files are not in the project root, we can adjust the glob.
+*/
+@source "./**/*.{html,php,md,js,ts,jsx,tsx}";
+
+/* 
+    Because we're using customisable Tailwind now, we can create some custom breakpoints.
+*/
+
+@theme {
+    --breakpoint-sm: 666px;
+    --breakpoint-md: 888px;
+    --breakpoint-lg: 1000px;
+    --breakpoint-xl: 1200px;
+    --breapoint-2xl: 1800px;
+}
+
+/* Finally, let's load the forms plugin (v4). */
+@plugin "@tailwindcss/forms";

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your very own dashboard to help you manage your online shop.">
+  <title>Shop Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+     
+     @keyframes slideIn {
+      0%   { transform: translateX(10px); opacity: 0; }
+      100% { transform: translateX(0);    opacity: 1; } 
+      }
+
+    @keyframes slideUp {
+      0%   { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0);    opacity: 1; } 
+    }
+
+        @keyframes appearUp {
+      0% { opacity: 0; transform: translateY(10px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+        @keyframes iconSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .icon-spin {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    a:hover .icon-spin {
+      animation: iconSpin 0.6s linear;
+    }
+
+
+    .appear-up {
+      opacity: 0;
+      animation: appearUp 0.4s ease forwards;
+    }
+
+    .slide-animation {
+      animation: slideIn 1s linear;
+    }
+
+    .slide-animation-up {
+      animation: slideUp 1s linear;
+    }
+  </style>
+
+
+</head>
+
+<body class="bg-gray-200 text-slate-900 font-sans text-[15px] leading-relaxed">
+  <div class="flex min-w-[528px] overflow-x-hidden leading">
+
+    <!-- SIDEBAR -->
+    <aside class="flex flex-col items-center min-h-screen bg-teal-800 text-neutral-50">
+      <img class="w-[100px] rounded-full mt-7" src="img/profile-picture.webp" alt="A portrait of a woman.">
+
+      <div class="flex flex-1 flex-col">
+        <ul class="px-4 py-2 space-y-1">
+          <li class="px-1 py-2 appear-up delay-100"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+
+            Dashboard</a></li>
+          <li class="px-1 py-2 appear-up delay-200"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          </svg>
+
+            Messages</a></li>
+          <li class="px-1 py-2 appear-up delay-300"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+          </svg>
+
+            My Listings</a></li>
+          <li class="px-1 py-2 appear-up delay-400"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 icon-spin">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+          </svg>
+
+            Orders & Delivery</a></li>
+          <li class="px-1 py-2 appear-up delay-500"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+
+            Finances</a></li>
+          <li class="px-1 py-2 appear-up delay-600"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+
+            Analytics</a></li>
+          <li class="px-1 py-2 appear-up delay-700"><a class="flex items-center gap-2 transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+
+            Settings</a></li>
+        </ul>
+        <ul class="px-4 py-2 space-y-1">
+          <li class="px-1 py-2 appear-up delay-800"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+
+            Help Center</a></li>
+          <li class="px-1 py-2 appear-up delay-900"><a class="inline-block transform transition-transform duration-200 hover:-translate-y-0.5" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-spin size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+
+            Sign Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex-1">
+
+      <!-- HEADER -->
+      <header class="py-4 text-center bg-zinc-200 text-neutral-700 flex flex-col justify-between shadow-lg/20 shadow-teal-900 px-8 lg:flex-row gap-3">
+        <h1 class="font-medium text-3xl pt-3">Welcome Back, Clayton!</h1>
+
+         <div class="border rounded-lg px-3 py-0.5 border-zinc-400 object-c">
+                <h2 class="italic">Quick Actions Toolbar:</h2>
+                <ul class="flex gap-4 text-sm">
+                    <!-- each has to have an icon  -->
+        
+                    <li><a class="inline-flex items-center rounded- gap-1 text-teal-700 hover:text-teal-900" href="#">
+        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        Add New Listing
+                    </a></li>
+                    <li><a href="#" class="inline-flex items-center gap-1 text-teal-700 hover:text-teal-900">
+        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                        </svg>
+                        View Shop
+                    </a>
+                    </li>
+        
+                    <li><a href="#" class="inline-flex items-center gap-1 text-teal-700 hover:text-teal-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z" />
+                        </svg>
+                        View Inbox
+                    </a>
+                    </li>
+                    <li><a href="#" class="inline-flex items-center gap-1 text-teal-700 hover:text-teal-900">
+        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                        </svg>
+                        Go to Earnings
+                    </a></li>
+                </ul>
+            </div>
+      </header>
+
+      <!-- MAIN BODY -->
+      <main class="border-box container mx-auto px-7 mt-6 mb-6 min-w-[435px]">
+        <h2 class="font-bold text-3xl text-teal-600 pb-2 slide-animation">Overview</h2>
+        <p class="pb-5 slide-animation">Here's a quick glance at how your shop is doing today.</p>
+
+        <div class="flex flex-col lg:flex-row gap-2 container px-3 items-stretch">
+
+          <!-- KEY METRICS -->
+          <section class="p-4 bg-zinc-100 rounded-lg shadow-lg/30 overflow-hidden space-y-3 flex-2 slide-animation-up">
+            <h3 class="text-lg font-semibold text-zinc-800 pb-1 tracking-tight">Key Metrics</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gray-200 rounded-lg px-6 pb-5 pt-4">
+                <h4 class="text-zinc-500 text-sm pb-1">Sales This Month</h4>
+                <p class="font-semibold text-xl text-zinc-700">$2,450 CAD</p>
+                <p class="text-xs text-green-700 italic">+12% from last month</p>
+              </div>
+
+              <div class="bg-gray-200 rounded-lg px-6 pb-5 pt-4">
+                <h4 class="text-zinc-500 text-sm pb-1">Orders Pending</h4>
+                <p class="text-xl text-zinc-700 font-light"><span class="font-semibold text-xl">4</span> awaiting fulfilment</p>
+              </div>
+
+              <div class="bg-gray-200 rounded-lg px-6 pb-5 pt-4">
+                <h4 class="text-zinc-500 text-sm pb-1">Shipped Orders</h4>
+                <p class="text-xl text-zinc-700 font-light"><span class="font-semibold text-xl">8</span> shipped</p>
+              </div>
+
+              <div class="bg-gray-200 rounded-lg px-6 pb-5 pt-4">
+                <h4 class="text-zinc-500 text-sm pb-1">Shop Visits Today</h4>
+                <p class="text-xl text-zinc-700 font-light"><span class="font-semibold text-xl">162</span> visitors</p>
+              </div>
+
+              <div class="bg-gray-200 col-span-2 rounded-lg px-6 pb-5 pt-4">
+                <h4 class="text-zinc-500 text-sm pb-1">Low-Stock Alerts</h4>
+                <ul class="text-[15px] text-zinc-700 space-y-1">
+                  <li>Terracotta Planter <span class="text-xs italic text-red-500">– only 2 left</span></li>
+                  <li>Wheel-Thrown Trinket Bowl <span class="text-xs italic text-red-500">– only 1 left</span></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- UNREAD MESSAGES -->
+          <section class="p-4 bg-zinc-100 rounded-lg shadow-lg/30 overflow-hidden space-y-3 flex-3 slide-animation-up">
+            <h3 class="text-lg font-semibold text-zinc-800 pb-1 tracking-tight">Unread Messages</h3>
+            <div class="space-y-3">
+
+              <!-- Message 1 -->
+              <div class="bg-gray-200 rounded-lg p-4 flex flex-col lg:flex-row justify-between gap-4">
+                <div class="flex-1 text-[15px] text-zinc-700 leading-relaxed space-y-1">
+                  <p class="text-sm font-semibold text-zinc-800"><span class="italic text-zinc-600">Subject:</span> Glaze Food-Safety Question</p>
+                  <div class="flex justify-between text-xs text-zinc-500">
+                    <span>From: Dana Stone</span><span>Date: Oct 19, 2025</span>
+                  </div>
+                  <p>Hi Clayton, I purchased your Reactive Glaze Dinner Plate last month and was wondering if it’s certified food-safe for daily use.</p>
+                </div>
+                <div class="px-3 shrink-0">
+                                <ul class="flex flex-col justify-start gap-2 text-xs text-center">
+                                <li class="border rounded-xl px-2 py-1 bg-teal-700 text-white hover:bg-teal-800">
+                                    <a href="#" class="block w-full h-full">Reply</a>
+                                </li>
+                                <li class="bg-gray-200 text-gray-800 hover:bg-gray-300 border rounded-xl px-2 py-1">
+                                    <a href="#" class="block w-full h-full">Mark as Read</a>
+                                </li>
+                                <li class="border rounded-xl px-2 py-1 bg-red-100 text-red-700 hover:bg-red-200">
+                                    <a href="#" class="block w-full h-full">Delete</a>
+                                </li>
+                                </ul>
+                            </div>
+              </div>
+
+              <!-- Message 2 -->
+              <div class="bg-gray-200 rounded-lg p-4 flex flex-col lg:flex-row justify-between gap-4">
+                <div class="flex-1 text-[15px] text-zinc-700 leading-relaxed space-y-1">
+                  <p class="text-sm font-semibold text-zinc-800"><span class="italic text-zinc-600">Subject:</span> Custom Initials on Mugs</p>
+                  <div class="flex justify-between text-xs text-zinc-500">
+                    <span>From: Lee Parker</span><span>Date: Oct 20, 2025</span>
+                  </div>
+                  <p>Hello Clayton, I’d love to order four hand-glazed mugs with my initials “L.P.” stamped on the base. Could you let me know the cost?</p>
+                </div>
+                 <div class="px-3 shrink-0">
+                            <ul class="flex flex-col justify-start gap-2 text-xs text-center">
+                            <li class="border rounded-xl px-2 py-1 bg-teal-700 text-white hover:bg-teal-800 text-center">
+                                <a href="#">Reply</a>
+                            </li>
+                            <li class="bg-gray-200 text-gray-800 hover:bg-gray-300 border rounded-xl px-2 py-1">
+                                <a href="#">Mark as Read</a>
+                            </li>
+                            <li class="border rounded-xl px-2 py-1 bg-red-100 text-red-700 hover:bg-red-200">
+                                <a href="#">Delete</a>
+                            </li>
+                            </ul>
+                        </div>
+              </div>
+
+              <!-- Message 3 -->
+              <div class="bg-gray-200 rounded-lg p-4 flex flex-col lg:flex-row justify-between gap-4">
+                <div class="flex-1 text-[15px] text-zinc-700 leading-relaxed space-y-1">
+                  <p class="text-sm font-semibold text-zinc-800"><span class="italic text-zinc-600">Subject:</span> Shipping Timeline for Order #1021</p>
+                  <div class="flex justify-between text-xs text-zinc-500">
+                    <span>From: Morgan Lee</span><span>Date: Oct 22, 2025</span>
+                  </div>
+                  <p>Hello Clayton, could you let me know when Order #1021 will ship? It’s for my girlfriend’s birthday next Friday.</p>
+                </div>
+                <div class="px-3 shrink-0">
+                                <ul class="flex flex-col justify-start gap-2 text-xs text-center">
+                                <li class="border rounded-xl px-2 py-1 bg-teal-700 text-white hover:bg-teal-800">
+                                    <a href="#" class="block w-full h-full">Reply</a>
+                                </li>
+                                <li class="bg-gray-200 text-gray-800 hover:bg-gray-300 border rounded-xl px-2 py-1">
+                                    <a href="#" class="block w-full h-full">Mark as Read</a>
+                                </li>
+                                <li class="border rounded-xl px-2 py-1 bg-red-100 text-red-700 hover:bg-red-200">
+                                    <a href="#" class="block w-full h-full">Delete</a>
+                                </li>
+                                </ul>
+                            </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- RIGHT COLUMN -->
+          <div class="flex flex-col gap-2 flex-2 slide-animation-up">
+
+            <!-- RECENT ORDERS -->
+            <section class="flex-1 p-4 bg-zinc-100 rounded-lg shadow-lg/30 overflow-hidden space-y-3">
+              <h3 class="text-lg font-semibold text-zinc-800 pb-1 tracking-tight">Recent Orders</h3>
+              <ul class="divide-y divide-zinc-300 text-[15px] text-zinc-700 leading-relaxed">
+                <li class="pb-2">
+                  <h4 class="text-sm font-semibold text-zinc-600">Order #1023</h4>
+                  <p class="text-lg text-zinc-700 font-light pb-2">4 × Porcelain Serving Bowls</p>
+                  <p class="text-xs text-zinc-500">Status: Processing</p>
+                </li>
+                <li class="pt-3 pb-2">
+                  <h4 class="text-sm font-semibold text-zinc-600">Order #1022</h4>
+                  <p class="text-lg text-zinc-700 font-light pb-2">1 × Hand-glazed Teapot</p>
+                  <p class="text-xs text-zinc-500">Status: Shipped</p>
+                </li>
+                <li class="pt-3">
+                  <h4 class="text-sm font-semibold text-zinc-600">Order #1021</h4>
+                  <p class="text-lg text-zinc-700 font-light pb-2">2 × Handcrafted Ceramic Mugs</p>
+                  <p class="text-xs text-zinc-500">Status: Delivered</p>
+                </li>
+              </ul>
+              <a href="#" class="block text-sm text-teal-700 hover:text-teal-900 pt-1">View All Orders</a>
+            </section>
+
+            <!-- TOP SELLING ITEMS -->
+            <section class="p-4 bg-zinc-100 rounded-lg shadow-lg/30 overflow-hidden space-y-3">
+              <h3 class="text-lg font-semibold text-zinc-800 pb-1 tracking-tight">Top Selling Items</h3>
+              <ul class="text-[15px] text-zinc-700 leading-relaxed space-y-1">
+                <li><span class="font-semibold text-zinc-800">Handcrafted Ceramic Mug</span> — 35 units sold</li>
+                <li><span class="font-semibold text-zinc-800">Reactive Glaze Dinner Plate</span> — 27 units sold</li>
+                <li><span class="font-semibold text-zinc-800">Knitted Scarf</span> — 19 units sold</li>
+              </ul>
+            </section>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
